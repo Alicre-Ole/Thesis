@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *,
 *::before,
 *::after{
@@ -570,3 +571,577 @@ h2.adminHead{
         font-size: 20px;
     }
 }
+=======
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Roboto', sans-serif;
+    font-size: 10px;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #cfcccc;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: background-color .5s ease;
+    z-index: 1000;
+}
+
+.container{
+    width: 100%;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.nav-cont{
+    margin: 0 50px 0 50px;
+}
+
+.nav{
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: .1px solid #2595f0;
+    transition: height .5s ease;
+}
+
+.nav a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.6rem;
+}
+
+.nav{
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+a.burger{
+    font-size: 2.5rem;
+}
+
+.nav-list{
+    list-style: none;
+    display: flex;
+    margin-right: auto;
+    margin-left: 4rem;
+}
+
+.nav-link{
+    margin: 0 2rem;
+    position: relative;
+}
+
+.nav-link::after{
+    content: '';
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .5s ease;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+    text-decoration: none;
+}
+
+#nav-donate{
+    display: inline-block;
+    background-color: #2190e0;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    transition: background-color .5s ease;
+}
+
+#nav-av{
+    display: inline-block;
+    padding: 1rem 2rem;
+}
+
+#nav-av:hover{
+    color: #ffc507;
+    text-decoration: none;
+}
+
+#nav-donate:hover{
+    background-color:#ffc507;
+    text-decoration: none;
+}
+
+
+/*STYLES AFTER SCROLL*/
+.scrolling-active{
+    background-color: #fff;
+    box-shadow: 0 3px 1rem rgba(0,0,0,.5);
+}
+
+.scrolling-active .nav{
+    height: 6.6rem;
+}
+
+.scrolling-active .nav a{
+    color: #313131;
+}
+
+.scrolling-active .sidenav a{
+    color: rgb(189, 189, 192);
+}
+
+.scrolling-active #nav-donate{
+    background-color: #2595f0;
+    color: #fff;
+}
+
+.scrolling-active #nav-donate:hover{
+    background-color: #ffc507;
+    color: #fff;
+    text-decoration: none;
+}
+
+.scrolling-active .nav-link::after{
+    background-color: #313131;
+    color: #ffc507;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background: url("../images/banner.png") center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.banner::after{
+    content: '';
+    width: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#001338;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 15px;
+    color: rgb(189, 189, 192);
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: goldenrod;
+    text-decoration: none;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  #main {
+    transition: margin-left .5s;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+
+/*FLOATING GO-TO-TOP BUTTON*/
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 20px; 
+    z-index: 99; 
+    border: none;
+    outline: none; 
+    background-color:#001C54; 
+    color: white; 
+    cursor: pointer; 
+    padding: 10px; 
+    border-radius: 20px;
+    font-size: 15px;
+    box-shadow: 0px 0px 3px 1px #aaaaaa;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; 
+  }
+
+.learnMore{
+    border-style: solid;
+    border-width: 2px;
+    padding: 10px 20px 10px 20px;
+    border-radius: 50px 50px 50px 50px;
+    border-color: #ffc507;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    width: 200px;
+    display: block;
+    margin: auto;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: none;
+}
+
+.learnMore:hover{
+    text-decoration: none;
+    color: #ffc507;
+}
+/*BANNER ENDS HERE*/
+
+/*HEADER STARTS HERE*/
+.header{
+    background-color:  red;
+}
+/*HEADER ENDS HERE*/
+
+/*MAIN CONTENT STARTS HERE*/
+.mainContent{
+    margin-top: 70px;
+}
+p{
+    font-size:20px;
+}
+hr.line{
+    border-color:#2190e0;
+    border-style: solid;
+    border-width: .01px;
+}
+.storyVideo{
+    background-color: #001C54;
+    width: 100%;
+}
+.paw{
+    width: 10px;
+    background: url("../images/paw.png") center no-repeat;
+    background-size:contain;
+}
+div.vision{
+    margin-top: 70px;
+}
+div.mission{
+    margin-top: 70px;
+}
+div.fPet{
+    margin-top: 100px;
+}
+.pet{
+    box-shadow: 0px 0px 3px 1px #aaaaaa;
+    border-radius:10px 10px 10px 10px;
+    padding: 10px;
+    margin: 5px;
+    background-color: white;
+    margin-top: 50px;
+}
+.pet:hover{
+    transform: rotate(3deg);
+    transition: 1s ease;
+    background-color:#001C54;
+}
+.profile{
+    border-style: solid;
+    border-width: 1px;
+    border-color: #001C54;
+    height: 150px;
+    border-radius:10px 10px 10px 10px;
+}
+div.showAnimals{
+    margin-top: 80px;
+}
+a.showAnimals:hover{
+    text-decoration: none;
+}
+/*MAIN CONTENT ENDS HERE*/
+
+/*DIRESTORY STARTS HERE*/
+.directory{
+    background-color:rgb(88, 88, 88);
+    margin-top:60px;
+    padding: 50px 0 20px 0;
+    color: #cfcccc;
+}
+a.link{
+    text-decoration: none;
+    color: #cfcccc;
+    margin-top: 3px;
+    font-size:12px
+}
+a.link:hover{
+    text-decoration: none;
+    transition: .5s ease;
+    color:#ffc507;
+}
+a.sm{
+    text-decoration: none;
+    color: #cfcccc;
+}
+a.sm:hover{
+    text-decoration: none;
+    color:#ffc507;
+}
+/*DIRECTORY ENDS HERE*/
+
+/*ANIMALS PAGE*/
+div.animalsTitle{
+    padding: 15px;
+    background-color:#001C54;
+}
+label.myLabel{
+    color: #cfcccc;
+}
+.animalContent{
+    background-color:#f5f5f5;
+    padding: 5px 5px 5px 5px;
+}
+
+/*ADMIN STYLES STARTS HERE*/
+div.adminBar{
+    box-shadow: 0px 0px 3px 1px #aaaaaa;
+}
+div.adminNavs{
+    padding: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color:#001338;
+    margin: 0px 5px 0px 5px;
+}
+div.adminNavs:hover{
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    border-color: #ffc507;
+}
+a.adminNavsLinks:hover{
+    text-decoration: none;
+}
+a.adminHome{
+    text-decoration: none;
+    color: #001338;
+    font-size: 15px;
+}
+a.adminHome:hover{
+    text-decoration: none;
+}
+div.bar{
+    padding: 10px;
+}
+
+div.petInfo{
+    width: 150px;
+    height: 170px;
+    background-color: #f5f5f5;
+    padding: 10px;
+    margin: 10px
+}
+div.petPic{
+    width: 130px;
+    height: 130px;
+    background-color:#001338;
+}
+div.total{
+    color:#001338;
+    padding: 10px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+div.petCard{
+    box-shadow: 0 1px .5rem rgba(0,0,0,.5);
+}
+div.petCard:hover{
+    background-color:#001C54;
+    color: #f5f5f5;
+    transition: background-color .9s ease;
+}
+
+div.upPet{
+    box-shadow: 0 1px .5rem rgba(0,0,0,.5);
+    margin-top: 20px;
+}
+
+a.actions{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+a.actions:hover{
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+/*form*/
+input.input{
+    font-size: 15px;
+}
+textarea.input{
+    font-size: 15px;
+    color: #001338;
+}
+
+/*ADMIN LOGIN*/
+div.adLogin{
+    padding: 80px; 
+    margin-top:auto; 
+    margin-bottom:auto;
+}
+div.adLoginMain{
+    background-color: white; 
+    padding:70px;
+}
+
+/*FOOTER STARTS HERE*/
+.footer{
+    background-color:#001C54;
+    margin-top:2px;
+    padding: 50px;
+    color:gray;
+}
+div.logo{
+    background: url("../images/whiteLogo.png") center no-repeat;
+    background-size:contain;
+}
+/*FOOTER ENDS HERE*/
+
+div.adminNavigations{
+    padding: 0 100px 0 100px;
+}
+p.pMV{ 
+    font-size: 40px; 
+    font-style:oblique; 
+    color:gray;
+}
+
+div.adminContBorder{
+    border-style: solid;
+    border-width: 5px 0 0 0;
+    border-color: #001338;
+}
+
+h2.adminHead{
+    background-color: #ffc507;
+    padding: 5px;
+}
+
+/*SETUP FROM TABLET DISPLAY TO PHONE SIZE*/
+@media only screen and (max-width: 1023px){
+    a.home{
+        display: none;
+    }
+    a.contacts{
+        display: none;
+    }
+    a.about{
+        display: none;
+    }
+    a.nfeed{
+        font-size: 12px;
+    }
+    #nav-av{
+        display: none;
+    }
+    #nav-donate{
+        font-size:10px;
+        padding: 5px 10px 5px 10px;
+    }
+    .nav{
+        height: 6rem;
+        display: flex;
+        align-items: center;
+        font-size: 5px;
+    }
+    a{
+        padding: 1rem;
+    }
+    .banner{
+        background-color: #001C54;
+        background-image: none;
+        margin: 0px;
+        padding-top:100px;
+    }
+    p{
+        font-size:15px;
+    }
+    .pet{
+        margin: 0 5px 20px 5px;
+        padding: 10px;
+    }
+    div.showAnimals{
+        margin-top: 20px;
+    }
+
+    .footer h3{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (min-width: 800px){
+    .banner{
+        padding-top:0;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    div.adLogin{
+        padding: 40px; 
+        margin-top:auto; 
+        margin-bottom:auto;
+    }
+    div.adLoginMain{
+        background-color: white; 
+        padding:40px;
+    }
+    div.welAdmin{
+        display: none;
+    }
+    div.adminNavs{
+        padding: 5px;
+    }
+    div.adminNavigations{
+        padding: 0 50px 0 50px;
+    }
+    p.pMV{ 
+        font-size: 20px;
+    }
+}
+>>>>>>> 706c2167ea97f6d170709abd0642e606d82008d4
